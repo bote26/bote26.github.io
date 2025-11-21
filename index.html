@@ -22,6 +22,9 @@
             --accent-solid: #60a5fa;
             --hover-bg: #1e293b;
         }
+        
+        /* Scroll suave para que el botón funcione bonito */
+        html { scroll-behavior: smooth; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -127,7 +130,6 @@
             margin-bottom: 40px;
         }
 
-        /* Nuevos estilos para el grupo de botones */
         .cta-group {
             display: flex;
             gap: 20px;
@@ -144,6 +146,7 @@
             border-radius: 6px;
             position: relative;
             z-index: 1;
+            cursor: pointer;
         }
         .btn-glow:hover {
             background: #e2e8f0;
@@ -339,10 +342,10 @@
                 Especialista en la construcción de modelos predictivos y pipelines de datos escalables. Ayudo a empresas a reducir incertidumbre mediante matemáticas aplicadas.
             </p>
             
-            <!-- BOTONES CTA: VER PROYECTOS Y DESCARGAR CV -->
+            <!-- BOTONES CTA -->
             <div class="cta-group">
+                <!-- Este botón busca el ID #projects -->
                 <a href="#projects" class="btn-glow">Ver Proyectos</a>
-                <!-- IMPORTANTE: Este enlace busca un archivo llamado cv.pdf -->
                 <a href="cv.pdf" target="_blank" class="btn-outline"><i class="fas fa-file-download"></i> Descargar CV</a>
             </div>
         </section>
@@ -365,7 +368,9 @@
         </div>
     </div>
 
-    <div class="container">
+    <!-- AQUÍ AGREGUÉ EL id="projects" para que el botón funcione -->
+    <div class="container" id="projects">
+        
         <!-- PROJECTS SECTION -->
         <div class="section-header">
             <div>
